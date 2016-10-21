@@ -31,14 +31,22 @@ import {
   DotcmsTreeableDetailModule,
 } from 'dotcms-js/dotcms-js';
 
+import {LoginComponent} from './login/login.component';
+import {routing} from './app.routing';
+import {SiteBrowserComponent} from './site-browser/site-browser.component';
+import {AuthService} from './auth.service';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent,
+    SiteBrowserComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
+    routing,
 
     DotcmsBreadcrumbModule,
     DotcmsSiteDatatableModule,
@@ -48,6 +56,7 @@ import {
   ],
   providers: [
     Logger,
+    {provide: AuthService, useClass: AuthService},
     {provide: AppConfig, useClass: AppConfig},
     {provide: FileSystemService, useClass: FileSystemService},
     {provide: HttpClient, useClass: HttpClient},

@@ -12,11 +12,7 @@ import {JWTAuthService} from 'dotcms-js/core/util/jwt-auth.service';
   ]
 })
 export class AppComponent {
-  title = 'app works!';
 
-  constructor(private jWTAuthService: JWTAuthService) {
-    jWTAuthService.login('http://demo37.dotcms.com', 'admin@dotcms.com', 'admin').subscribe(res => {
-      console.log('Login Successfully');
-    })
+  constructor() {
   }
 }

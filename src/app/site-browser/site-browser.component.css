@@ -1,0 +1,14 @@
+breadcrumb, site-selector {
+  display: block;
+  margin-bottom: 20px;
+}
+
+treeable-detail {
+  float: right;
+  width: 300px;
+}
+
+site-datatable {
+  display: block;
+  margin-right: 340px;
+}
